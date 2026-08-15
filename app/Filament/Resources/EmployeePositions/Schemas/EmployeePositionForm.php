@@ -14,10 +14,10 @@ class EmployeePositionForm
             ->components([
                 TextInput::make('name')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(100)
                     ->label('Name'),
                 Textarea::make('description')
-                    ->maxLength(65535)
+                    ->maxLength(100)
                     ->columnSpanFull()
                     ->label('Description'),
             ]);

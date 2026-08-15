@@ -28,11 +28,11 @@ class EmployeeForm
                     ->label('DNI'),
                 TextInput::make('first_name')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(40)
                     ->label('First Name'),
                 TextInput::make('last_name')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(40)
                     ->label('Last Name'),
                 TextInput::make('phone')
                     ->tel()
@@ -40,17 +40,17 @@ class EmployeeForm
                     ->label('Phone'),
                 TextInput::make('email')
                     ->email()
-                    ->maxLength(255)
+                    ->maxLength(80)
                     ->label('Email'),
                 TextInput::make('address')
-                    ->maxLength(255)
+                    ->maxLength(100)
                     ->label('Address'),
                 DatePicker::make('birth_date')
                     ->label('Birth Date'),
                 TextInput::make('salary')
                     ->required()
                     ->numeric()
-                    ->prefix('$')
+                    ->prefix('L.')
                     ->default(0)
                     ->label('Salary'),
                 Toggle::make('status')

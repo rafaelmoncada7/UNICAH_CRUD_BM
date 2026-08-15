@@ -27,12 +27,12 @@ class SaleDetailForm
                 TextInput::make('unit_price')
                     ->required()
                     ->numeric()
-                    ->prefix('$')
+                    ->prefix('L.')
                     ->label('Unit Price'),
                 TextInput::make('subtotal')
                     ->required()
                     ->numeric()
-                    ->prefix('$')
+                    ->prefix('L.')
                     ->label('Subtotal'),
             ]);
     }

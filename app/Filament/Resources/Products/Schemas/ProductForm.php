@@ -28,7 +28,7 @@ class ProductForm
                     ->label('Unit'),
                 TextInput::make('name')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(100)
                     ->label('Product Name'),
                 TextInput::make('sku')
                     ->maxLength(100)
@@ -36,7 +36,7 @@ class ProductForm
                 TextInput::make('price')
                     ->required()
                     ->numeric()
-                    ->prefix('$')
+                    ->prefix('L.')
                     ->label('Price'),
                 TextInput::make('stock')
                     ->required()
@@ -47,7 +47,7 @@ class ProductForm
                     ->default(true)
                     ->label('Active Status'),
                 Textarea::make('description')
-                    ->maxLength(65535)
+                    ->maxLength(110)
                     ->columnSpanFull()
                     ->label('Description'),
             ]);

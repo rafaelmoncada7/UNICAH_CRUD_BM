@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Roles\Schemas;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
 
 class RoleForm
 {
@@ -12,14 +13,18 @@ class RoleForm
     {
         return $schema
             ->components([
-                TextInput::make('name')
+                Select:: make('name')
+                    ->options([
+                        'Administrador' => 'Admininistrador',
+                        'Empleado' => 'Empleado',
+                    ])
+                    ->placeholder('Select')
+                    ->required(),
+
+                    TextInput::make('descripcion')
                     ->required()
-                    ->maxLength(100)
-                    ->label('Role Name'),
-                Textarea::make('description')
-                    ->maxLength(65535)
-                    ->columnSpanFull()
-                    ->label('Description'),
+                    ->default(null)
+                    ->maxLength(100),
             ]);
     }
 }

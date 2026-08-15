@@ -14,21 +14,21 @@ class SupplierForm
             ->components([
                 TextInput::make('company_name')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(100)
                     ->label('Company Name'),
                 TextInput::make('contact_name')
-                    ->maxLength(255)
+                    ->maxLength(80)
                     ->label('Contact Name'),
                 TextInput::make('phone')
                     ->tel()
-                    ->maxLength(255)
+                    ->maxLength(20)
                     ->label('Phone'),
                 TextInput::make('email')
                     ->email()
-                    ->maxLength(255)
+                    ->maxLength(80)
                     ->label('Email'),
                 TextInput::make('address')
-                    ->maxLength(255)
+                    ->maxLength(100)
                     ->label('Address'),
                 Toggle::make('status')
                     ->default(true)

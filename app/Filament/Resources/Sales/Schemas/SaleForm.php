@@ -14,18 +14,21 @@ class SaleForm
         return $schema
             ->components([
                 Select::make('customer_id')
-                    ->relationship('customer', 'name')
+                    ->relationship('customer', 'first_name') // <--- Cambia 'first_name' por la columna real de tu tabla customers (ej. 'nombre')
                     ->required()
                     ->label('Customer'),
+
                 Select::make('user_id')
-                    ->relationship('user', 'name')
+                    ->relationship('user', 'name') // 'name' suele ser el estándar en la tabla users de Laravel
                     ->required()
                     ->label('User / Seller'),
+
                 TextInput::make('total')
                     ->required()
                     ->numeric()
-                    ->prefix('$')
+                    ->prefix('L.')
                     ->label('Total Amount'),
+
                 Select::make('status')
                     ->options([
                         'pending' => 'Pending',
@@ -35,6 +38,7 @@ class SaleForm
                     ->required()
                     ->default('completed')
                     ->label('Status'),
+
                 DateTimePicker::make('sale_date')
                     ->required()
                     ->default(now())

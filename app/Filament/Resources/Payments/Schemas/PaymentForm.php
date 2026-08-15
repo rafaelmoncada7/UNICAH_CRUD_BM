@@ -20,7 +20,7 @@ class PaymentForm
                 TextInput::make('amount')
                     ->required()
                     ->numeric()
-                    ->prefix('$')
+                    ->prefix('L.')
                     ->label('Amount'),
                 Select::make('payment_method')
                     ->options([

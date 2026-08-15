@@ -19,14 +19,14 @@ class AuditLogForm
                     ->label('User'),
                 TextInput::make('module')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(200)
                     ->label('Module'),
                 TextInput::make('action')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(200)
                     ->label('Action'),
                 Textarea::make('description')
-                    ->maxLength(65535)
+                    ->maxLength(80)
                     ->columnSpanFull()
                     ->label('Description'),
                 TextInput::make('ip')

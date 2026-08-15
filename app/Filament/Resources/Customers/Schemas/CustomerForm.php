@@ -18,11 +18,11 @@ class CustomerForm
                     ->label('DNI'),
                 TextInput::make('first_name')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(40)
                     ->label('First Name'),
                 TextInput::make('last_name')
                     ->required()
-                    ->maxLength(255)
+                    ->maxLength(40)
                     ->label('Last Name'),
                 TextInput::make('phone')
                     ->tel()
@@ -30,10 +30,10 @@ class CustomerForm
                     ->label('Phone'),
                 TextInput::make('email')
                     ->email()
-                    ->maxLength(255)
+                    ->maxLength(100)
                     ->label('Email'),
                 TextInput::make('address')
-                    ->maxLength(255)
+                    ->maxLength(100)
                     ->label('Address'),
                 Toggle::make('status')
                     ->default(true)

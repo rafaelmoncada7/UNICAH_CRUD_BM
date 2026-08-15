@@ -15,6 +15,7 @@ class CustomersTable
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('dni')
+                    ->label('DNI') 
                     ->searchable()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('first_name')
